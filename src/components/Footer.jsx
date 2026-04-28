@@ -36,10 +36,10 @@ const Footer = () => {
         <div>
           <h4 className="text-slate-900 font-bold mb-6 uppercase tracking-wider text-xs">Services</h4>
           <ul className="space-y-4">
-            <li><button onClick={() => scrollTo('services')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">IT Staffing</button></li>
-            <li><button onClick={() => scrollTo('services')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">IT Consulting</button></li>
-            <li><button onClick={() => scrollTo('services')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">Business Process</button></li>
-            <li><button onClick={() => scrollTo('services')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">Technology Solutions</button></li>
+            <li><button onClick={() => scrollTo('staffing')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">IT Staffing</button></li>
+            <li><button onClick={() => scrollTo('consulting')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">IT Consulting</button></li>
+            <li><button onClick={() => scrollTo('bps')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">Business Process</button></li>
+            <li><button onClick={() => scrollTo('tech')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">Technology Solutions</button></li>
           </ul>
         </div>
 

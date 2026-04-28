@@ -11,18 +11,47 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
+    subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for reaching out! We will get back to you shortly.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/yuvaraju121204@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _subject: formData.subject || "New Contact Form Submission - InsertSol"
+        })
+      });
+      
+      if (response.ok) {
+        alert('Thank you for reaching out! We will get back to you shortly.');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert('Oops! Something went wrong. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -89,14 +118,15 @@ const Contact = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700">Company Name</label>
+                    <label className="text-sm font-bold text-slate-700">Subject</label>
                     <input 
                       type="text" 
-                      name="company"
-                      value={formData.company}
+                      name="subject"
+                      value={formData.subject}
                       onChange={handleChange}
+                      required
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-slate-400"
-                      placeholder="Your Company Inc."
+                      placeholder="e.g., General Inquiry"
                     />
                   </div>
 
@@ -115,10 +145,11 @@ const Contact = () => {
 
                   <button 
                     type="submit"
-                    className="w-full bg-accent hover:bg-sky-600 text-white font-bold py-4 rounded-xl flex items-center justify-center transition-all shadow-md hover:shadow-lg group"
+                    disabled={isSubmitting}
+                    className={`w-full bg-accent hover:bg-sky-600 text-white font-bold py-4 rounded-xl flex items-center justify-center transition-all shadow-md group ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-lg'}`}
                   >
-                    Start Your Project
-                    <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    {isSubmitting ? 'Sending...' : 'Start Your Project'}
+                    {!isSubmitting && <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />}
                   </button>
                 </form>
               </div>

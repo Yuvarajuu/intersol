@@ -17,6 +17,7 @@ const servicesList = [
     id: 'staffing',
     title: 'IT Staffing',
     icon: Users,
+    image: '/assets/img2.png',
     features: ['Bulk hiring', 'Niche skill hiring', 'Fast turnaround'],
     problem: 'Companies struggle to find qualified tech talent quickly, delaying critical projects.',
     solution: 'We leverage a global talent pool to deploy the right experts to your team at unprecedented speed.',
@@ -26,6 +27,7 @@ const servicesList = [
     id: 'consulting',
     title: 'IT Consulting',
     icon: Briefcase,
+    image: '/assets/it_consulting.png',
     features: ['Strategic IT solutions', 'Digital transformation', 'Tech advisory'],
     problem: 'Organizations face complex digital landscapes holding back their growth.',
     solution: 'Our experts provide strategic roadmaps to modernize infrastructure and adopt new technologies.',
@@ -35,6 +37,7 @@ const servicesList = [
     id: 'bps',
     title: 'Business Process Services',
     icon: TrendingUp,
+    image: '/assets/bps_service.png',
     features: ['Process optimization', 'Operational efficiency', 'Scalable support'],
     problem: 'Inefficient workflows consume valuable resources and reduce profitability.',
     solution: 'We analyze, optimize, and manage your business processes using best practices.',
@@ -44,6 +47,7 @@ const servicesList = [
     id: 'tech',
     title: 'Technology Solutions',
     icon: Globe,
+    image: '/assets/tech_solutions.png',
     features: ['Scalable solutions', 'Innovation-driven development', 'Enterprise systems'],
     problem: 'Off-the-shelf software often fails to meet unique enterprise needs.',
     solution: 'We design and build bespoke technology solutions tailored to your operational requirements.',
@@ -76,7 +80,7 @@ const Services = () => {
       {servicesList.map((service, index) => {
         const isEven = index % 2 === 0;
         return (
-          <section key={service.id} className={`py-24 lg:py-32 ${isEven ? 'bg-white' : 'bg-secondary border-y border-slate-100'}`}>
+          <section id={service.id} key={service.id} className={`py-24 lg:py-32 ${isEven ? 'bg-white' : 'bg-secondary border-y border-slate-100'}`}>
             <div className="container mx-auto px-6 lg:px-12">
               <motion.div 
                 initial="hidden"
@@ -119,18 +123,13 @@ const Services = () => {
                   </motion.ul>
                 </div>
 
-                {/* Abstract Visual */}
+                {/* Visual */}
                 <motion.div 
                   variants={fadeIn} 
                   className={`relative ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}
                 >
-                  <div className="aspect-[4/3] saas-card bg-slate-50 flex items-center justify-center p-8 relative overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-${isEven ? 'bl' : 'tr'} from-sky-50 to-transparent`}></div>
-                    <div className="w-3/4 h-3/4 bg-white rounded-3xl shadow-sm border border-slate-100 flex items-center justify-center relative z-10">
-                       <service.icon size={80} className="text-accent opacity-20" strokeWidth={1} />
-                       <div className="absolute bottom-6 right-6 w-1/3 h-2 bg-slate-200 rounded-full"></div>
-                       <div className="absolute bottom-10 right-6 w-1/4 h-2 bg-slate-200 rounded-full"></div>
-                    </div>
+                  <div className="saas-card bg-white p-2 relative overflow-hidden rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                    <img src={service.image} alt={service.title} className="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                 </motion.div>
               </motion.div>

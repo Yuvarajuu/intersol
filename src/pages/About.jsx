@@ -74,23 +74,9 @@ const About = () => {
             </div>
 
             <motion.div variants={fadeIn} className="relative">
-               <div className="aspect-[4/3] saas-card bg-sky-50 flex items-center justify-center p-8">
-                 <div className="w-full h-full relative">
-                    <div className="absolute top-4 left-4 w-1/2 h-1/2 bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
-                       <div className="w-10 h-10 bg-sky-100 rounded-full mb-3"></div>
-                       <div className="w-3/4 h-3 bg-slate-100 rounded-full mb-2"></div>
-                       <div className="w-1/2 h-3 bg-slate-100 rounded-full"></div>
-                    </div>
-                    <div className="absolute bottom-4 right-4 w-1/2 h-1/2 bg-accent rounded-2xl shadow-lg p-4">
-                       <div className="w-10 h-10 bg-white/20 rounded-full mb-3"></div>
-                       <div className="w-3/4 h-3 bg-white/20 rounded-full mb-2"></div>
-                       <div className="w-1/2 h-3 bg-white/20 rounded-full"></div>
-                    </div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl border border-slate-50 flex items-center justify-center z-10">
-                       <Target className="text-accent" />
-                    </div>
-                 </div>
-               </div>
+              <div className="saas-card bg-white p-2 relative overflow-hidden rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                <img src="/assets/about_team.png" alt="insertSol Team" className="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
             </motion.div>
           </motion.div>
         </div>

@@ -45,26 +45,19 @@ const Home = () => {
               </motion.div>
             </motion.div>
             
-            {/* Hero Visual Placeholder */}
+            {/* Hero Visual */}
             <motion.div 
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative hidden lg:block"
             >
-              <div className="w-full aspect-square max-w-[600px] ml-auto relative">
-                {/* Abstract SaaS Illustration Placeholder */}
-                <div className="absolute inset-0 bg-white rounded-full shadow-2xl shadow-sky-100 flex items-center justify-center border border-slate-100">
-                   <div className="w-3/4 h-3/4 bg-gradient-to-tr from-sky-50 to-white rounded-full flex flex-col items-center justify-center shadow-inner">
-                      <LayoutDashboard className="text-accent w-32 h-32 opacity-20 mb-4" strokeWidth={1} />
-                      <div className="flex gap-2">
-                         <div className="w-16 h-4 bg-sky-100 rounded-full"></div>
-                         <div className="w-8 h-4 bg-accent rounded-full"></div>
-                      </div>
-                   </div>
+              <div className="w-full max-w-[600px] ml-auto relative">
+                <div className="rounded-3xl shadow-2xl shadow-sky-100 overflow-hidden border border-slate-100">
+                  <img src="/assets/img1.png" alt="insertSol Technology Solutions" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 {/* Floating Elements */}
-                <div className="absolute top-10 right-10 saas-card p-4 animate-bounce">
+                <div className="absolute -top-6 -right-6 saas-card p-4 animate-bounce z-10">
                   <LineChart className="text-accent w-8 h-8" />
                 </div>
               </div>
@@ -119,15 +112,8 @@ const Home = () => {
             </div>
             
             <motion.div variants={fadeIn} className="relative">
-              <div className="aspect-[4/3] saas-card bg-slate-50 flex items-center justify-center p-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-sky-50 to-transparent"></div>
-                {/* Abstract Visual */}
-                <div className="grid grid-cols-2 gap-4 w-3/4 relative z-10">
-                  <div className="h-32 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center"><div className="w-12 h-12 bg-sky-100 rounded-full"></div></div>
-                  <div className="h-32 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center"><div className="w-12 h-12 bg-sky-100 rounded-full"></div></div>
-                  <div className="h-32 bg-accent rounded-2xl shadow-lg flex items-center justify-center"><CheckCircle2 className="text-white w-10 h-10" /></div>
-                  <div className="h-32 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center"><div className="w-12 h-12 bg-sky-100 rounded-full"></div></div>
-                </div>
+              <div className="saas-card bg-white p-2 relative overflow-hidden rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                <img src="/assets/img2.png" alt="Strategic Staffing" className="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </motion.div>
           </motion.div>
@@ -145,15 +131,8 @@ const Home = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center"
           >
             <motion.div variants={fadeIn} className="relative order-2 lg:order-1">
-              <div className="aspect-[4/3] saas-card bg-white flex items-center justify-center p-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-bl from-sky-50 to-transparent"></div>
-                {/* Abstract Visual */}
-                <div className="w-3/4 h-3/4 bg-slate-50 rounded-3xl border border-slate-100 p-6 flex flex-col gap-4 relative z-10">
-                   <div className="w-full h-8 bg-sky-100 rounded-lg"></div>
-                   <div className="w-3/4 h-8 bg-slate-200 rounded-lg"></div>
-                   <div className="w-5/6 h-8 bg-slate-200 rounded-lg"></div>
-                   <div className="mt-auto w-1/2 h-12 bg-accent rounded-xl"></div>
-                </div>
+              <div className="saas-card bg-white p-2 relative overflow-hidden rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+                <img src="/assets/it_consulting.png" alt="IT Consulting" className="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </motion.div>
 
