@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffffff;
+  --color-secondary: #f8fafc;
+  --color-accent: #0284c7; /* A strong SaaS blue */
+  --color-accentGlow: #38bdf8;
+  --color-text-main: #0f172a;
+  --color-text-muted: #475569;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary);
+    color: var(--color-text-main);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-main);
+    letter-spacing: -0.02em;
+  }
+  p {
+    color: var(--color-text-muted);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .saas-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .saas-card:hover {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .text-gradient {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--color-accent), var(--color-accentGlow));
+  }
+  
+  .bg-gradient-soft {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+}
