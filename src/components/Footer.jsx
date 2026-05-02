@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.jpeg';
 
 const Footer = () => {
   const scrollTo = (id, e) => {
@@ -16,8 +17,8 @@ const Footer = () => {
     <footer className="border-t border-gray-200 bg-secondary py-16 text-slate-600 text-sm">
       <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <button onClick={() => scrollTo('home')} className="text-2xl font-extrabold tracking-tight mb-4 inline-block text-slate-900 bg-transparent border-none cursor-pointer p-0">
-            insert<span className="text-accent">Sol</span>
+          <button onClick={() => scrollTo('home')} className="mb-4 inline-flex items-center bg-transparent border-none cursor-pointer p-0">
+            <img src={logo} alt="insertSol Logo" className="h-16 w-auto object-contain" />
           </button>
           <p className="mt-2 leading-relaxed">
             Empowering global businesses with scalable tech talent and strategic consulting solutions.

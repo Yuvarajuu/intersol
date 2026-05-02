@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logo from '../assets/logo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,8 +56,8 @@ const Navbar = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm py-4' : 'bg-white/90 backdrop-blur-md py-6 border-b border-gray-100'}`}>
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center">
-          <button onClick={() => scrollTo('home')} className="text-2xl font-extrabold tracking-tight text-slate-900 bg-transparent border-none cursor-pointer">
-            insert<span className="text-accent">Sol</span>
+          <button onClick={() => scrollTo('home')} className="bg-transparent border-none cursor-pointer flex items-center p-0">
+            <img src={logo} alt="insertSol Logo" className="h-20 w-auto object-contain" />
           </button>
           
           {/* Desktop Nav */}

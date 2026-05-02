@@ -17,7 +17,7 @@ const servicesList = [
     id: 'staffing',
     title: 'IT Staffing',
     icon: Users,
-    image: '/assets/img2.png',
+    image: '/assets/img_home_staffing.png',
     features: ['Bulk hiring', 'Niche skill hiring', 'Fast turnaround'],
     problem: 'Companies struggle to find qualified tech talent quickly, delaying critical projects.',
     solution: 'We leverage a global talent pool to deploy the right experts to your team at unprecedented speed.',
