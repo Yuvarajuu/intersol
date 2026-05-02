@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ const Navbar = () => {
       // Determine which section is currently in view
       const sections = ['home', 'about', 'services', 'careers', 'contact'];
       let current = '';
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -26,7 +26,7 @@ const Navbar = () => {
           }
         }
       }
-      
+
       if (current) {
         setActiveSection(current);
       }
@@ -57,18 +57,17 @@ const Navbar = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center">
           <button onClick={() => scrollTo('home')} className="bg-transparent border-none cursor-pointer flex items-center p-0">
-            <img src={logo} alt="insertSol Logo" className="h-20 w-auto object-contain" />
+            <img src={logo} alt="insertSol Logo" className="h-28 w-auto object-contain" />
           </button>
-          
+
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             {links.map((link) => (
               <button
                 key={link.name}
                 onClick={() => scrollTo(link.id)}
-                className={`text-sm font-semibold hover:text-accent transition-colors bg-transparent border-none cursor-pointer ${
-                  activeSection === link.id ? 'text-accent' : 'text-slate-600'
-                }`}
+                className={`text-sm font-semibold hover:text-accent transition-colors bg-transparent border-none cursor-pointer ${activeSection === link.id ? 'text-accent' : 'text-slate-600'
+                  }`}
               >
                 {link.name}
               </button>
@@ -79,7 +78,7 @@ const Navbar = () => {
           </nav>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-slate-900 bg-transparent border-none cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-brandDark bg-transparent border-none cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -87,7 +86,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg"
@@ -97,9 +96,8 @@ const Navbar = () => {
               <button
                 key={link.name}
                 onClick={() => scrollTo(link.id)}
-                className={`text-lg font-semibold text-left bg-transparent border-none cursor-pointer ${
-                  activeSection === link.id ? 'text-accent' : 'text-slate-600'
-                }`}
+                className={`text-lg font-semibold text-left bg-transparent border-none cursor-pointer ${activeSection === link.id ? 'text-accent' : 'text-slate-600'
+                  }`}
               >
                 {link.name}
               </button>

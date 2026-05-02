@@ -66,7 +66,7 @@ const Services = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-brandDark">
               Solutions that <span className="text-accent">scale</span>.
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -95,7 +95,7 @@ const Services = () => {
                     <div className="w-14 h-14 bg-sky-50 rounded-xl flex items-center justify-center mr-6 border border-sky-100">
                       <service.icon size={28} className="text-accent" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900">{service.title}</h2>
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-brandDark">{service.title}</h2>
                   </motion.div>
                   
                   <motion.div variants={fadeIn} className="mb-8 space-y-6">
@@ -147,7 +147,7 @@ const Services = () => {
             viewport={{ once: true }}
             className="saas-card bg-gradient-soft p-12 md:p-20 text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-brandDark">
               Ready to transform your business?
             </h2>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">

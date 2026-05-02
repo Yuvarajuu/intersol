@@ -26,7 +26,7 @@ const About = () => {
             animate="visible"
             variants={staggerContainer}
           >
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-extrabold mb-6 text-slate-900 tracking-tight">
+            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-extrabold mb-6 text-brandDark tracking-tight">
               Building a <span className="text-accent">bold new future</span>.
             </motion.h1>
             <motion.p variants={fadeIn} className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
@@ -39,7 +39,7 @@ const About = () => {
       {/* Overview - Text Left / Visual Right */}
       <section className="py-24 lg:py-32 bg-white border-b border-slate-100">
         <div className="container mx-auto px-6 lg:px-12">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -48,7 +48,7 @@ const About = () => {
           >
             <div className="max-w-xl">
               <motion.div variants={fadeIn} className="text-accent font-bold tracking-widest uppercase text-sm mb-4">Our Expertise</motion.div>
-              <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-slate-900">
+              <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-brandDark">
                 Operational excellence as an extension of your business.
               </motion.h2>
               <motion.p variants={fadeIn} className="text-slate-600 mb-6 text-lg leading-relaxed">
@@ -57,7 +57,7 @@ const About = () => {
               <motion.p variants={fadeIn} className="text-slate-600 mb-8 text-lg leading-relaxed">
                 Together, we discover ideas and connect the dots to build a better future. We remain loyal to our heritage of operational excellence, reflected by the best client satisfaction scores in the industry.
               </motion.p>
-              
+
               <motion.ul variants={staggerContainer} className="space-y-4">
                 {[
                   'Advanced information technology services',
@@ -86,12 +86,12 @@ const About = () => {
       <section className="py-24 lg:py-32 bg-secondary">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900">Driven by <span className="text-accent">Values</span></h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-brandDark">Driven by <span className="text-accent">Values</span></h2>
             <p className="text-lg text-slate-600">
               The principles that guide our decisions, our partnerships, and our commitment to operational excellence. With insertSol, you get a partner who is committed to helping you build and implement better solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { title: 'Innovation', icon: Zap, desc: 'Continuously pushing boundaries to deliver innovative sensing and connectivity solutions.' },
@@ -99,18 +99,26 @@ const About = () => {
               { title: 'Trust', icon: Shield, desc: 'Remaining loyal to our heritage as a true extension of our clients\' business.' },
               { title: 'Client Success', icon: Award, desc: 'Reflected by consistently holding the best client satisfaction scores in the industry.' },
             ].map((val, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="saas-card p-8 bg-white"
+                whileHover={{
+                  scale: 1.1,
+                  y: -12,
+                  rotate: 1
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 150,
+                  damping: 12
+                }}
+                className="saas-card p-8 bg-white cursor-pointer"
               >
                 <div className="w-14 h-14 bg-sky-50 rounded-xl flex items-center justify-center mb-6">
                   <val.icon className="text-accent" size={28} />
                 </div>
-                <h4 className="text-xl font-bold mb-3 text-slate-900">{val.title}</h4>
+                <h4 className="text-xl font-bold mb-3 text-brandDark">{val.title}</h4>
                 <p className="text-slate-600 leading-relaxed">{val.desc}</p>
               </motion.div>
             ))}

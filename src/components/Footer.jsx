@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   const scrollTo = (id, e) => {
@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
           <button onClick={() => scrollTo('home')} className="mb-4 inline-flex items-center bg-transparent border-none cursor-pointer p-0">
-            <img src={logo} alt="insertSol Logo" className="h-16 w-auto object-contain" />
+            <img src={logo} alt="insertSol Logo" className="h-32 w-auto object-contain" />
           </button>
           <p className="mt-2 leading-relaxed">
             Empowering global businesses with scalable tech talent and strategic consulting solutions.
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         
         <div>
-          <h4 className="text-slate-900 font-bold mb-6 uppercase tracking-wider text-xs">Company</h4>
+          <h4 className="text-brandDark font-bold mb-6 uppercase tracking-wider text-xs">Company</h4>
           <ul className="space-y-4">
             <li><button onClick={() => scrollTo('about')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">About Us</button></li>
             <li><button onClick={() => scrollTo('careers')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">Careers</button></li>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-slate-900 font-bold mb-6 uppercase tracking-wider text-xs">Services</h4>
+          <h4 className="text-brandDark font-bold mb-6 uppercase tracking-wider text-xs">Services</h4>
           <ul className="space-y-4">
             <li><button onClick={() => scrollTo('staffing')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">IT Staffing</button></li>
             <li><button onClick={() => scrollTo('consulting')} className="hover:text-accent font-medium transition-colors bg-transparent border-none cursor-pointer p-0 text-slate-600">IT Consulting</button></li>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-slate-900 font-bold mb-6 uppercase tracking-wider text-xs">Connect</h4>
+          <h4 className="text-brandDark font-bold mb-6 uppercase tracking-wider text-xs">Connect</h4>
           <ul className="space-y-4">
             <li><a href="#" className="hover:text-accent font-medium transition-colors">LinkedIn</a></li>
             <li><a href="#" className="hover:text-accent font-medium transition-colors">Twitter</a></li>

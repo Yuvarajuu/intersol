@@ -11,6 +11,7 @@ export default {
         secondary: "#1f1f1f",
         accent: "#0ea5e9", // A clean modern blue
         accentGlow: "#38bdf8",
+        brandDark: "#023461",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

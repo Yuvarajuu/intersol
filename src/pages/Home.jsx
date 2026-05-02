@@ -22,21 +22,21 @@ const Home = () => {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-soft">
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
               className="max-w-2xl"
             >
-              <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-slate-900">
+              <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-brandDark">
                 Unstoppable <br />
                 <span className="text-accent">Growth</span> Powered by Elite Talent.
               </motion.h1>
-              
+
               <motion.p variants={fadeIn} className="text-lg md:text-xl text-slate-600 mb-10 max-w-xl leading-relaxed">
                 Scale your engineering and operations seamlessly. insertSol connects visionary companies with global top-tier IT professionals and strategic solutions.
               </motion.p>
-              
+
               <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
                 <a href="#contact" className="px-8 py-4 rounded-full bg-accent text-white font-bold hover:bg-sky-600 transition-colors shadow-lg hover:shadow-xl flex items-center group">
                   Partner With Us
@@ -44,9 +44,9 @@ const Home = () => {
                 </a>
               </motion.div>
             </motion.div>
-            
+
             {/* Hero Visual */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -71,8 +71,8 @@ const Home = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <p className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by the world's leading companies</p>
           <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-            {['TechCorp', 'InnovateInc', 'GlobalSys', 'NexusNet', 'CloudSync'].map((logo) => (
-              <div key={logo} className="text-2xl font-black tracking-tighter text-slate-900">{logo}</div>
+            {['Vsolve Tech Global Solutions', 'Machint', 'Globalwave', 'Evoke', 'Pyroferos'].map((logo) => (
+              <div key={logo} className="text-2xl font-black tracking-tighter text-brandDark">{logo}</div>
             ))}
           </div>
         </div>
@@ -81,7 +81,7 @@ const Home = () => {
       {/* Alternating Feature 1: Text Left, Image Right */}
       <section className="py-24 lg:py-32 relative bg-white">
         <div className="container mx-auto px-6 lg:px-12">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -90,7 +90,7 @@ const Home = () => {
           >
             <div className="max-w-xl">
               <motion.div variants={fadeIn} className="text-accent font-bold tracking-widest uppercase text-sm mb-4">Strategic Staffing</motion.div>
-              <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-slate-900">
+              <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-brandDark">
                 Deploy critical talent at unprecedented speed.
               </motion.h2>
               <motion.p variants={fadeIn} className="text-slate-600 mb-8 text-lg leading-relaxed">
@@ -110,7 +110,7 @@ const Home = () => {
                 </a>
               </motion.div>
             </div>
-            
+
             <motion.div variants={fadeIn} className="relative">
               <div className="saas-card bg-white p-2 relative overflow-hidden rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
                 <img src="/assets/img2.png" alt="Strategic Staffing" className="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-700" />
@@ -123,7 +123,7 @@ const Home = () => {
       {/* Alternating Feature 2: Image Left, Text Right */}
       <section className="py-24 lg:py-32 relative bg-secondary">
         <div className="container mx-auto px-6 lg:px-12">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -138,7 +138,7 @@ const Home = () => {
 
             <div className="max-w-xl order-1 lg:order-2">
               <motion.div variants={fadeIn} className="text-accent font-bold tracking-widest uppercase text-sm mb-4">IT Consulting</motion.div>
-              <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-slate-900">
+              <motion.h2 variants={fadeIn} className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-brandDark">
                 Transform your technology infrastructure.
               </motion.h2>
               <motion.p variants={fadeIn} className="text-slate-600 mb-8 text-lg leading-relaxed">
@@ -160,11 +160,11 @@ const Home = () => {
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
             {[
-              { number: '5,000+', label: 'Positions Filled Globally' },
+              { number: '30+', label: 'Positions Filled Globally' },
               { number: '95%', label: 'Client Retention Rate' },
-              { number: '200+', label: 'Enterprise Partners' },
+              { number: '10+', label: 'Enterprise Partners' },
             ].map((stat, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +191,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="saas-card bg-gradient-soft p-12 md:p-20 text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-brandDark">
               Ready to accelerate your growth?
             </h2>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
