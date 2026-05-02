@@ -71,7 +71,7 @@ const Home = () => {
         <div className="container mx-auto px-6 lg:px-12">
           <p className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by the world's leading companies</p>
           <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-            {['Vsolve Tech Global Solutions', 'Machint', 'Globalwave', 'Evoke', 'Pyroferos'].map((logo) => (
+            {['Vsolve Tech Global Solutions', 'Machint', 'Globalwave', 'Evoke', 'Pyroferus'].map((logo) => (
               <div key={logo} className="text-2xl font-black tracking-tighter text-brandDark">{logo}</div>
             ))}
           </div>
