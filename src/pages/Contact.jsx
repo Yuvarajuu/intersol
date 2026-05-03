@@ -100,7 +100,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-slate-400"
-                        placeholder="Raj Kumar"
+                        placeholder="Ravi Teja"
                       />
                     </div>
                     <div className="space-y-2">
@@ -112,7 +112,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-slate-400"
-                        placeholder="Raj@example.com"
+                        placeholder="teja@example.com"
                       />
                     </div>
                   </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="text-slate-900 font-bold mb-1 text-lg">Global Headquarters</h4>
-                      <p className="text-slate-600 leading-relaxed">Maddilapalem, <br /> Visakhapatnam,<br /> Andhra Pradesh</p>
+                      <p className="text-slate-600 leading-relaxed">Flat No# 504, Sri Satya Sai Enclave,<br /> Kailasa Metta, Waltair Uplands,<br /> Visakhapatnam, 530003</p>
                     </div>
                   </motion.div>
                 </div>
