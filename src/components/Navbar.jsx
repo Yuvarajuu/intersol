@@ -47,7 +47,7 @@ const Navbar = () => {
   };
 
   const links = [
-    { name: 'About us', id: 'home' },
+    { name: 'About Us', id: 'home' },
     { name: 'Company', id: 'about' },
     { name: 'Services', id: 'services' },
     { name: 'Careers', id: 'careers' },
